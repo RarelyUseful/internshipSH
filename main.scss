@@ -1,0 +1,38 @@
+.header {
+  padding: 15px 0;
+  color: orangered;
+  border: solid black 1px;
+  &__logo {
+    font-size: 32px;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    font-weight: 700;
+    letter-spacing: 2px;
+    border: solid green 1px;
+  }
+  &__navbar {
+    padding: 0, 0;
+    border: solid black 1px;
+    color: red;
+  }
+}
+body {
+  font-family: "Open Sans", sans-serif;
+}
+.maingrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 4px;
+  grid-auto-flow: row;
+  justify-content: start;
+  align-content: start;
+  justify-items: center;
+  align-items: start;
+  grid-template-areas: ". . . . . . . . . . . .";
+  width: 1130px;
+  height: 1000px;
+  border: solid black 1px;
+  color: red;
+}
