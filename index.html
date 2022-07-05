@@ -6,40 +6,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Internship SH</title>
     <link href="main.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header id="header">
-      <div>
-        <h1 class="header__logo">
-          <a href="index.html">Logo</a>
-        </h1>
-        <nav id="navbar" class="header__navbar">
-          <ul>
-            <li class="dropdown">
-              <a href="#"><span>Solutions</span> <i class="bi bi-chevron-down"></i></a>
-              <ul>
-                <li><a href="index.html">mockup 1</a></li>
-                <li><a href="index.html">mockup 2</a></li>
-              </ul>
-            </li>
-            <li><a class="nav-link scrollto active" href="#team">Team</a></li>
-            <li><a class="nav-link scrollto" href="#career">Career</a></li>
-            <li><a class="nav-link scrollto" href="#4fun">4Fun</a></li>
-            <li><a class="nav-link scrollto" href="#speaking">Speaking</a></li>
+      <div class="header">
+        <a href="index.html" class="header__logo"
+          ><img src="assets/img/logoSH.svg" alt="Software Hut Logo"
+        /></a>
 
-            <li><a class="nav-link scrollto" href="#blog">Blog</a></li>
+        <nav id="navbar" class="navbar">
+          <ul class="navbar__ul">
+            <li>
+              <a
+                style="font-weight: 800; text-decoration: dashed"
+                class="navbar__link scrollto"
+                href="#solutions"
+                >Solutions</a
+              >
+            </li>
+            <li><a class="navbar__link scrollto" href="#team">Team</a></li>
+            <li><a class="navbar__link scrollto" href="#career">Career</a></li>
+            <li><a class="navbar__link scrollto" href="#4fun">4Fun</a></li>
+            <li><a class="navbar__link scrollto" href="#speaking">Speaking</a></li>
+            <li><a class="navbar__link scrollto" href="#blog">Blog</a></li>
           </ul>
-          <!-- <i class="bi bi-list mobile-nav-toggle"></i> -->
+          <!-- <a href="#estimate" class="estimate-btn scrollto">Estimate project</a> -->
         </nav>
-        <button>Estimate project</button>
+        <a href="#estimate" class="estimate-btn scrollto">Estimate project</a>
       </div>
     </header>
-    <maingrid
-      ><td></td>
-      <th></th>
-      <tr></tr>
-      <div id="row1">div1</div>
-      <div id="row2" class="main">div2</div>
-    </maingrid>
+    <section id="hero">
+      <div class="section1">
+        <div class="section1__title">
+          <div class="section1__title--h1">Various services for Nordic Tech House (NTH)</div>
+
+          <div class="section1__title--h2">Stockholm, Sweden | Nordichouse.com</div>
+        </div>
+      </div>
+    </section>
+    <div class="align-items-center">
+      <section>
+        <div class="maingrid">
+          <td></td>
+          <tr></tr>
+          <div>11</div>
+          <div>12</div>
+          <br />
+          <div>14</div>
+        </div>
+      </section>
+    </div>
   </body>
 </html>
