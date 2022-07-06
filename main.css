@@ -1,11 +1,12 @@
 .header {
+  position: fixed;
   font-family: "Montserrat", sans-serif;
   font-size: 15px;
   font-weight: 400;
   transition: all 0.5s;
   z-index: 10;
   padding: 15px 0;
-  background-color: #fff300;
+  background: repeating-linear-gradient(30deg, #fff300 0px, #ffcd00 80px);
   background-size: auto;
   background-size: 100%;
   align-items: center;
@@ -22,7 +23,6 @@
 
 @media (max-width: 900px) {
   .header {
-    background-color: pink;
     flex-direction: column;
   }
 }
@@ -68,12 +68,6 @@
   transition: 0.3s;
 }
 
-@media (max-width: 366px) {
-  .navbar {
-    background-color: pink;
-  }
-}
-
 .estimate-btn {
   font-family: "Montserrat", sans-serif;
   font-weight: 800;
@@ -104,17 +98,17 @@
 .section1 {
   overflow: hidden;
   font-family: "Montserrat", sans-serif;
-  background-color: #fff300;
+  background: repeating-linear-gradient(30deg, #fff300 0px, #ffcd00 80px);
+  display: flex;
+  flex-direction: row;
+  height: 75vh;
 }
 
 .section1__title {
-  margin: 150px 300px;
-  width: 100%;
+  margin: 19vh 0vw 0vh 16vw;
+  width: 100vw;
   max-width: 750px;
-  height: 500px;
   max-height: 700px;
-  align-items: stretch;
-  justify-items: stretch;
   display: grid;
 }
 
@@ -122,12 +116,13 @@
   display: flex;
   font-size: 60px;
   font-weight: 700;
-  line-height: 77px;
-  letter-spacing: -2px;
+  line-height: 75px;
+  letter-spacing: -3px;
   text-align: left;
   margin: 0 auto;
   color: #323232;
-  max-height: 150px;
+  max-height: 225px;
+  width: 750px;
 }
 
 .section1__title--h2 {
@@ -141,18 +136,47 @@
   color: #323232;
 }
 
-.section1 p {
-  margin: 0;
-  margin: 0;
-  font-size: 36px;
+.section1__title--logo {
+  background: #fff300;
+  align-items: center;
+  height: 225px;
+  width: 225px;
+  display: flex;
+  font-size: 55px;
   font-weight: 700;
-  text-transform: uppercase;
-  font-family: "Montserrat", sans-serif;
-  color: greenyellow;
+  line-height: 45px;
+  letter-spacing: -5px;
+  text-align: center;
+  text-transform: capitalize;
+  color: black;
+}
+
+@media (max-width: 1360px) {
+  .section1 {
+    flex-direction: column;
+    height: auto;
+    justify-content: center;
+  }
+  .section1__title {
+    margin: 20vh 0 0 0;
+    justify-content: center;
+    align-items: center;
+  }
+  .section1__title--h1 {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+  }
+  .section1__title--logo {
+    margin: 0vh 0vw 0vh 0vw;
+    justify-self: center;
+  }
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: body "Montserrat", sans-serif;
+  margin: 0;
 }
 
 .maingrid {
