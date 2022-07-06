@@ -8,24 +8,25 @@ $color_yellow: rgb(255, 243, 0);
 $color_orange: #e13c12;
 $color_orange2: #e92f03;
 $color_black: #000000;
+
 $background_gradient: repeating-linear-gradient(30deg, $color_yellow 0px, rgb(255, 205, 0) 80px);
+
 $font-family_1: "Montserrat", sans-serif;
+
 body {
   font-family: &$font-family_1;
   margin: 0;
 }
+
 .header {
   position: fixed;
-
   font-family: $font-family_1;
   font-size: 15px;
   font-weight: 400;
   transition: all 0.5s;
   z-index: 10;
   padding: 15px 0;
-  //   background-color: $color_yellow;
   background: $background_gradient;
-
   background-size: auto;
   background-size: 100%;
   align-items: center;
@@ -33,15 +34,14 @@ body {
   display: flex;
   width: 100%;
   min-height: 50px;
+  gap: 20px;
 
   &__logo {
     flex: 1;
   }
-  gap: 20px;
 }
 @media (max-width: 900px) {
   .header {
-    // background-color: pink;
     flex-direction: column;
   }
 }
@@ -54,8 +54,6 @@ body {
     padding: 0;
     display: flex;
     list-style: none;
-    // align-items: center;
-    // background-color: $color_yellow;
   }
   li {
     position: relative;
@@ -67,6 +65,7 @@ body {
       }
     }
   }
+
   &__link {
     display: flex;
     text-decoration: none;
@@ -86,19 +85,12 @@ body {
       transition: 0.3s;
     }
   }
-  //   .active {
-  //     color: green;
-  //     &:focus {
-  //       color: green;
-  //     }
-  //   }
 }
 
 .estimate-btn {
   font-family: "Montserrat", sans-serif;
   font-weight: 800;
   text-decoration: none;
-
   color: $color_darkgray;
   border-radius: 4px;
   padding: 7px 25px 8px 25px;
@@ -113,12 +105,7 @@ body {
     color: $color_brown;
   }
 }
-@media (max-width: 200px) {
-  .get-started-btn {
-    padding: 7px 20px 8px 20px;
-    margin-right: 15px;
-  }
-}
+
 .section1 {
   overflow: hidden;
   font-family: $font-family_1;
@@ -127,20 +114,14 @@ body {
   flex-direction: row;
   justify-content: space-between;
   height: 75vh;
-  //   width: 100vw;
   padding: 20vh 15vw 0vh 15vw;
 
   &__titlegrid {
-    // margin: 19vh 0vw 0vh 15vw;
-    // width: 100vw;
     max-width: 750px;
     // min-height: 500px;
     // max-height: 700px;
-    // align-items: stretch;
-    // justify-items: stretch;
     display: flex;
     flex-direction: column;
-    // border: solid red 2px;
     margin: 0;
 
     &--h1 {
@@ -151,9 +132,7 @@ body {
       letter-spacing: -3px;
       text-align: left;
       margin: 0;
-      // text-transform: capitalize;
       color: $color_darkgray2;
-      //   max-height: 225px;
       width: 750px;
     }
     &--h2 {
@@ -170,13 +149,10 @@ body {
   &__logogrid {
     align-self: flex-start;
     justify-self: flex-end;
-    // width: 1000px;
     display: flex;
     max-width: 265px;
     max-height: 265px;
     &__logo {
-      // margin: 19vh 5vw 0vh 15vw;
-
       background: $color_yellow;
       align-items: center;
       min-height: 200px;
@@ -200,7 +176,6 @@ body {
 }
 @media (max-width: 1200px) {
   .section1 {
-    // background: pink;
     flex-direction: column;
     height: auto;
     justify-content: center;
@@ -210,7 +185,6 @@ body {
       justify-content: center;
       align-items: center;
       &--h1 {
-        // font-size: 10vw;
         line-height: 60px;
         text-align: center;
         align-items: center;
@@ -220,19 +194,15 @@ body {
     }
     &__logogrid {
       margin: 0 auto;
-      //   justify-self: center;
-      //   &__logo {
-      //     justify-self: center;
-      //   }
     }
   }
 }
 .gridframe {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  margin: 0 auto;
   width: 100%;
+  max-width: 1130px;
 }
 .maingrid {
   display: grid;
@@ -243,11 +213,27 @@ body {
   grid-template-areas: ". . . . . . . . . . . .";
   justify-content: start;
   align-content: start;
-  justify-items: center;
+  justify-items: start;
   align-items: start;
   min-height: 100px;
-  min-width: 75vw;
   border: solid black 1px;
   color: red;
-  max-width: 1130px;
+}
+.maingridbox {
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-columns: 8% 8% 8% 8% 8% 8% 8% 8% 8% 8% 8% 8%;
+  grid-template-rows: 50%;
+  gap: 0px 0.36%;
+  grid-template-areas: ". . . . . . . . . . . .";
+  justify-content: start;
+  align-content: start;
+  justify-items: start;
+  align-items: start;
+  min-height: 100px;
+  border: solid black 1px;
+  color: red;
+
+  margin-top: -20px;
+  background: $color_white2;
 }
