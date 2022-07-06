@@ -1,3 +1,8 @@
+body {
+  font-family: body "Montserrat", sans-serif;
+  margin: 0;
+}
+
 .header {
   position: fixed;
   font-family: "Montserrat", sans-serif;
@@ -126,7 +131,6 @@
 }
 
 .section1__title--h2 {
-  margin-top: 200px;
   text-align: center;
   font-size: 14px;
   font-weight: 500;
@@ -151,7 +155,7 @@
   color: black;
 }
 
-@media (max-width: 1360px) {
+@media (max-width: 900px) {
   .section1 {
     flex-direction: column;
     height: auto;
@@ -174,24 +178,28 @@
   }
 }
 
-body {
-  font-family: body "Montserrat", sans-serif;
-  margin: 0;
+.gridframe {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .maingrid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 0.5fr 0.5fr;
-  gap: 0px 4px;
-  grid-auto-flow: row;
+  grid-auto-columns: 1fr;
+  grid-template-columns: 8% 8% 8% 8% 8% 8% 8% 8% 8% 8% 8% 8%;
+  grid-template-rows: 50%;
+  gap: 0px 0.36%;
+  grid-template-areas: ". . . . . . . . . . . .";
   justify-content: start;
   align-content: start;
   justify-items: center;
   align-items: start;
-  grid-template-areas: ". . . . . . . . . . . .";
-  max-width: 1130px;
   min-height: 100px;
+  min-width: 75vw;
   border: solid black 1px;
   color: red;
+  max-width: 1130px;
 }

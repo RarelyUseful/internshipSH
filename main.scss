@@ -10,7 +10,10 @@ $color_orange2: #e92f03;
 $color_black: #000000;
 $background_gradient: repeating-linear-gradient(30deg, $color_yellow 0px, rgb(255, 205, 0) 80px);
 $font-family_1: "Montserrat", sans-serif;
-
+body {
+  font-family: &$font-family_1;
+  margin: 0;
+}
 .header {
   position: fixed;
 
@@ -119,7 +122,6 @@ $font-family_1: "Montserrat", sans-serif;
 .section1 {
   overflow: hidden;
   font-family: $font-family_1;
-  //   background-color: $color_yellow;
   background: $background_gradient;
   display: flex;
   flex-direction: row;
@@ -150,7 +152,7 @@ $font-family_1: "Montserrat", sans-serif;
       width: 750px;
     }
     &--h2 {
-      margin-top: 200px;
+      //   margin-top: 200px;
       text-align: center;
       font-size: 14px;
       font-weight: 500;
@@ -176,8 +178,7 @@ $font-family_1: "Montserrat", sans-serif;
     }
   }
 }
-
-@media (max-width: 1360px) {
+@media (max-width: 900px) {
   .section1 {
     // background: pink;
     flex-direction: column;
@@ -202,24 +203,27 @@ $font-family_1: "Montserrat", sans-serif;
     }
   }
 }
-//
-body {
-  font-family: &$font-family_1;
-  margin: 0;
+.gridframe {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 .maingrid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 0.5fr 0.5fr;
-  gap: 0px 4px;
-  grid-auto-flow: row;
+  grid-auto-columns: 1fr;
+  grid-template-columns: 8% 8% 8% 8% 8% 8% 8% 8% 8% 8% 8% 8%;
+  grid-template-rows: 50%;
+  gap: 0px 0.36%;
+  grid-template-areas: ". . . . . . . . . . . .";
   justify-content: start;
   align-content: start;
   justify-items: center;
   align-items: start;
-  grid-template-areas: ". . . . . . . . . . . .";
-  max-width: 1130px;
   min-height: 100px;
+  min-width: 75vw;
   border: solid black 1px;
   color: red;
+  max-width: 1130px;
 }
