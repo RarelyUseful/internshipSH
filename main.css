@@ -106,31 +106,32 @@ body {
   background: repeating-linear-gradient(30deg, #fff300 0px, #ffcd00 80px);
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   height: 75vh;
+  padding: 20vh 15vw 0vh 15vw;
 }
 
-.section1__title {
-  margin: 19vh 0vw 0vh 16vw;
-  width: 100vw;
+.section1__titlegrid {
   max-width: 750px;
-  max-height: 700px;
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
 }
 
-.section1__title--h1 {
+.section1__titlegrid--h1 {
   display: flex;
   font-size: 60px;
   font-weight: 700;
   line-height: 75px;
   letter-spacing: -3px;
   text-align: left;
-  margin: 0 auto;
+  margin: 0;
   color: #323232;
-  max-height: 225px;
   width: 750px;
 }
 
-.section1__title--h2 {
+.section1__titlegrid--h2 {
+  margin-top: 20vw;
   text-align: center;
   font-size: 14px;
   font-weight: 500;
@@ -140,41 +141,55 @@ body {
   color: #323232;
 }
 
-.section1__title--logo {
+.section1__logogrid {
+  align-self: flex-start;
+  justify-self: flex-end;
+  display: flex;
+  max-width: 265px;
+  max-height: 265px;
+}
+
+.section1__logogrid__logo {
   background: #fff300;
   align-items: center;
-  height: 225px;
-  width: 225px;
+  min-height: 200px;
+  min-width: 200px;
+  max-height: 200px;
+  max-width: 200px;
+  height: 20vw;
+  width: 20vw;
   display: flex;
   font-size: 55px;
   font-weight: 700;
   line-height: 45px;
   letter-spacing: -5px;
   text-align: center;
+  margin: 0px 20px;
+  padding-left: 1fr;
   text-transform: capitalize;
   color: black;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1200px) {
   .section1 {
     flex-direction: column;
     height: auto;
     justify-content: center;
   }
-  .section1__title {
-    margin: 20vh 0 0 0;
+  .section1__titlegrid {
+    margin: auto 0 0 0;
     justify-content: center;
     align-items: center;
   }
-  .section1__title--h1 {
+  .section1__titlegrid--h1 {
+    line-height: 60px;
     text-align: center;
     align-items: center;
     justify-content: center;
     width: auto;
   }
-  .section1__title--logo {
-    margin: 0vh 0vw 0vh 0vw;
-    justify-self: center;
+  .section1__logogrid {
+    margin: 0 auto;
   }
 }
 
