@@ -1,5 +1,5 @@
 body {
-  font-family: body "Montserrat", sans-serif;
+  font-family: "Montserrat", sans-serif;
   margin: 0;
 }
 
@@ -13,11 +13,10 @@ body {
   padding: 15px 0;
   background: repeating-linear-gradient(30deg, #fff300 0px, #ffcd00 80px);
   background-size: auto;
-  background-size: 100%;
   align-items: center;
   justify-content: space-between;
   display: flex;
-  width: 100%;
+  width: 100vw;
   min-height: 50px;
   gap: 20px;
 }
@@ -29,6 +28,7 @@ body {
 @media (max-width: 900px) {
   .header {
     flex-direction: column;
+    gap: 0px;
   }
 }
 
@@ -175,6 +175,7 @@ body {
     align-items: center;
   }
   .section1__titlegrid--h1 {
+    padding-top: 5vw;
     line-height: 60px;
     text-align: center;
     align-items: center;
@@ -186,44 +187,191 @@ body {
   }
 }
 
-.gridframe {
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  width: 100%;
-  max-width: 1130px;
-}
-
 .maingrid {
   display: grid;
   grid-auto-columns: 1fr;
   grid-template-columns: 8% 8% 8% 8% 8% 8% 8% 8% 8% 8% 8% 8%;
   grid-template-rows: 50%;
   gap: 0px 0.36%;
-  grid-template-areas: ". . . . . . . . . . . .";
+  grid-template-areas: ". . . . . . . . . . . ." ". . . . . . . . . . . .";
   justify-content: start;
   align-content: start;
   justify-items: start;
   align-items: start;
   min-height: 100px;
-  border: solid black 1px;
-  color: red;
 }
 
-.maingridbox {
+.gridframe {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 1130px;
+}
+
+.gridframe__graybox1 {
   display: grid;
   grid-auto-columns: 1fr;
   grid-template-columns: 8% 8% 8% 8% 8% 8% 8% 8% 8% 8% 8% 8%;
   grid-template-rows: 50%;
   gap: 0px 0.36%;
-  grid-template-areas: ". . . . . . . . . . . .";
+  grid-template-areas: ". a1 . . . b1 . . c1 c1 c1 ." ". a2 . . . b2 . . c2 c2 c2 .";
   justify-content: start;
   align-content: start;
   justify-items: start;
   align-items: start;
   min-height: 100px;
-  border: solid black 1px;
-  color: red;
   margin-top: -20px;
   background: #f2f2f2;
+  padding: 3vw 0 2vw;
+}
+
+.gridframe__graybox1__title {
+  font-family: "Montserrat", sans-serif;
+  color: #323232;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+  display: flex;
+}
+
+.gridframe__graybox1__title--1 {
+  grid-area: a1;
+}
+
+.gridframe__graybox1__title--2 {
+  grid-area: b1;
+}
+
+.gridframe__graybox1__title--3 {
+  grid-area: c1;
+}
+
+.gridframe__graybox1__desc {
+  font-family: "Montserrat", sans-serif;
+  color: #323232;
+  line-height: 16px;
+  font-size: 32px;
+  font-weight: 600;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.gridframe__graybox1__desc--1 {
+  grid-area: a2;
+}
+
+.gridframe__graybox1__desc--2 {
+  grid-area: b2;
+}
+
+.gridframe__graybox1__desc--3 {
+  grid-area: c2;
+}
+
+.gridframe__info1 {
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-columns: 8% 8% 8% 8% 8% 8% 8% 8% 8% 8% 8% 8%;
+  grid-template-rows: 25%;
+  gap: 0px 0.36%;
+  grid-template-areas: ". . a a a a a a a a . ." ". . b b b b b b b b . ." ". . c c c c c c c c . ." ". . l l l l l l l l . .";
+  justify-content: start;
+  align-content: start;
+  justify-items: start;
+  align-items: start;
+  min-height: max-content;
+  padding: 10vw 0 10vw;
+}
+
+.gridframe__info1__text__top {
+  grid-area: a;
+  font-family: "Montserrat", sans-serif;
+  color: #323232;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+}
+
+.gridframe__info1__text__mid {
+  grid-area: b;
+  font-family: "Roboto", sans-serif;
+  color: #323232;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+  padding: 2vw 0 2vw;
+}
+
+.gridframe__info1__text__bottom {
+  grid-area: c;
+  font-family: "Montserrat", sans-serif;
+  color: #323232;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+  padding: 2vw 0 2vw;
+}
+
+.gridframe__info1__logos {
+  grid-area: l;
+  height: 80px;
+  object-fit: contain;
+  justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+  justify-self: stretch;
+  align-items: center;
+}
+
+.gridframe__owner {
+  display: grid;
+  grid-template-columns: 8% 8% 8% 8% 8% 8% 8% 8% 8% 8% 8% 8%;
+  grid-template-rows: 70% 30%;
+  gap: 0px 0.36%;
+  grid-template-areas: "a a a a . b b b b b b ." "a a a a . c c c d . . .";
+  justify-content: start;
+  align-content: start;
+  justify-items: start;
+  align-items: start;
+  min-height: max-content;
+  padding: 10vw 0 10vw;
+}
+
+.gridframe__owner__image {
+  width: auto;
+  height: max-content;
+  grid-area: a;
+  display: flex;
+  object-fit: cover;
+}
+
+.gridframe__owner__desc {
+  grid-area: b;
+  font-family: "Roboto", sans-serif;
+  color: #323232;
+  font-size: 28px;
+  letter-spacing: normal;
+  font-weight: 300;
+  line-height: 36px;
+  font-style: italic;
+}
+
+.gridframe__owner__name {
+  grid-area: c;
+}
+
+.gridframe__owner__mark {
+  grid-area: d;
+}
+
+@media (max-width: 1200px) {
+  .gridframe__graybox1 {
+    margin: 0px;
+  }
+  .gridframe__graybox1__title {
+    font-size: calc(min(14px, 2.4vw));
+  }
+  .gridframe__graybox1__desc {
+    font-size: calc(min(32px, 5vw));
+  }
 }
