@@ -129,7 +129,7 @@ body {
 
     &--h1 {
       display: flex;
-      font-size: 60px;
+      font-size: calc(min(60px, 15vw));
       font-weight: 700;
       line-height: 75px;
       letter-spacing: -3px;
@@ -141,6 +141,7 @@ body {
     &--h2 {
       margin-top: 20vw;
       text-align: center;
+      font-size: calc(min(14px, 5vw));
       font-size: 14px;
       font-weight: 500;
       line-height: 36px;
@@ -188,7 +189,7 @@ body {
       justify-content: center;
       align-items: center;
       &--h1 {
-        padding-top: 5vw;
+        padding-top: 5vh;
         line-height: 60px;
         text-align: center;
         align-items: center;
@@ -236,7 +237,7 @@ body {
     min-height: 100px;
     margin-top: -20px;
     background: $color_white2;
-    padding: 3vw 0 2vw;
+    padding: 3vh 0 2vh;
 
     &__title {
       font-family: $font-family_1;
@@ -278,7 +279,7 @@ body {
     display: grid;
     grid-auto-columns: 1fr;
     grid-template-columns: 8% 8% 8% 8% 8% 8% 8% 8% 8% 8% 8% 8%;
-    grid-template-rows: 25%;
+    // grid-template-rows: 25%;
     gap: 0px 0.36%;
     grid-template-areas:
       ". . a a a a a a a a . ."
@@ -290,7 +291,7 @@ body {
     justify-items: start;
     align-items: start;
     min-height: max-content;
-    padding: 10vw 0 10vw;
+    padding: 10vh 0 10vh;
 
     &__text {
       &__top {
@@ -300,6 +301,7 @@ body {
         font-size: 14px;
         font-weight: 500;
         line-height: 18px;
+        padding: 2vh 0 2vh;
       }
       &__mid {
         grid-area: b;
@@ -308,7 +310,7 @@ body {
         font-size: 14px;
         font-weight: 500;
         line-height: 18px;
-        padding: 2vw 0 2vw;
+        padding: 2vh 0 2vh;
       }
       &__bottom {
         grid-area: c;
@@ -317,12 +319,12 @@ body {
         font-size: 14px;
         font-weight: 500;
         line-height: 18px;
-        padding: 2vw 0 2vw;
+        padding: 2vh 0 2vh;
       }
     }
     &__logos {
       grid-area: l;
-      height: 80px;
+      height: auto;
       object-fit: contain;
       justify-content: space-between;
       display: flex;
@@ -332,6 +334,7 @@ body {
       align-items: center;
       // align-self: center;
       // align-content: space-between;
+      padding: 2vh 0 2vh;
     }
   }
   &__owner {
@@ -348,7 +351,7 @@ body {
     justify-items: start;
     align-items: start;
     min-height: max-content;
-    padding: 10vw 0 10vw;
+    padding: 10vh 0 10vh;
 
     &__image {
       width: 100%;
@@ -393,7 +396,6 @@ body {
       position: relative;
       top: 0;
       left: 0;
-      width: 100%;
       height: 60%;
       color: $color_orange2;
       font-size: 160px;
@@ -411,6 +413,11 @@ body {
       }
       &__desc {
         font-size: calc(min(32px, 5vw));
+      }
+    }
+    &__owner {
+      &__desc {
+        font-size: calc(min(28px, 5vw));
       }
     }
   }
