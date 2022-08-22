@@ -34,6 +34,7 @@ body {
   z-index: 10;
   padding: 15px 0;
   background-image: url("./assets/img/background.jpg");
+  background-size: cover;
   // background: $background_gradient;
   background-size: auto;
   align-items: center;
@@ -124,6 +125,7 @@ body {
   overflow: hidden;
   font-family: $font-family_1;
   background-image: url("./assets/img/background.jpg");
+  background-size: cover;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
