@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Montserrat", sans-serif;
   margin: 0;
@@ -10,7 +14,7 @@ body {
   font-weight: 400;
   z-index: 10;
   padding: 15px 0;
-  background: repeating-linear-gradient(30deg, #fff300 0px, #ffcd00 80px);
+  background-image: url("./assets/img/background.jpg");
   background-size: auto;
   align-items: center;
   justify-content: space-between;
@@ -101,7 +105,7 @@ body {
 .herosection {
   overflow: hidden;
   font-family: "Montserrat", sans-serif;
-  background: repeating-linear-gradient(30deg, #fff300 0px, #ffcd00 80px);
+  background-image: url("./assets/img/background.jpg");
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -137,10 +141,9 @@ body {
 }
 
 .introgrid__text-secondary {
-  margin-top: 20vw;
+  margin-top: 15vw;
   text-align: center;
   font-size: calc(min(14px, 5vw));
-  font-size: 14px;
   font-weight: 500;
   line-height: 36px;
   letter-spacing: 2px;
@@ -612,7 +615,6 @@ body {
 }
 
 .fullscreenimage__image {
-  width: 100vw;
   object-fit: cover;
   width: 100%;
   display: inline-block;
@@ -776,16 +778,23 @@ body {
   }
 }
 
-.maingrid {
-  display: grid;
-  grid-auto-columns: 1fr;
-  grid-template-columns: 8% 8% 8% 8% 8% 8% 8% 8% 8% 8% 8% 8%;
-  grid-template-rows: 50%;
-  gap: 0px 0.36%;
-  grid-template-areas: ". . . . . . . . . . . ." ". . . . . . . . . . . .";
-  justify-content: start;
-  align-content: start;
-  justify-items: start;
-  align-items: start;
-  min-height: 100px;
+footer {
+  background-color: #323232;
+  align-items: center;
+  min-height: max-content;
+  padding: 5vh 0 5vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  color: #fff;
+}
+
+footer a {
+  text-decoration: none;
+  color: #e13c12;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }
